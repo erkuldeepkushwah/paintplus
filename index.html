@@ -672,21 +672,14 @@
                           method="POST"
                           target="google_hidden_iframe">
 
-                        <!-- Row 1: Name and Phone -->
+                        <!-- Row 1: Name and Phone (entry IDs matched to your live Google Form) -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="entry.1498135098" placeholder="Your Name" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-pink-500 transition">
-                            <input type="tel" name="entry.2606285" placeholder="Phone Number" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-pink-500 transition">
+                            <input type="text" name="entry.1689272147" placeholder="Your Name" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-pink-500 transition">
+                            <input type="tel" name="entry.903489122" placeholder="Phone Number" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-pink-500 transition">
                         </div>
 
-                        <!-- Row 2: Address -->
-                        <input type="text" name="entry.1424661284" placeholder="Site Address" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-pink-500 transition">
-
-                        <!-- Row 3: Pincode -->
-                        <input type="text" name="entry.1689272147" placeholder="Pincode" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-pink-500 transition">
-
-                        <!-- Hidden values for your Google Form's other fields -->
-                        <input type="hidden" name="entry.877086558" value="Yes,  I'll be there">
-                        <input type="hidden" name="entry.903489122" value="Option 1">
+                        <!-- Row 2: Site Full Address -->
+                        <input type="text" name="entry.877086558" placeholder="Site Address" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-pink-500 transition">
 
                         <!-- Submit Button -->
                         <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-pink-500 to-orange-500 text-white font-bold py-4 rounded-lg hover:shadow-lg transition transform hover:-translate-y-1">
