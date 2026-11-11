@@ -22,6 +22,14 @@ Paint Plus is a single-page marketing website for a paints, textures and home-im
 - **Floating WhatsApp button** — quick chat link on every screen.
 - **Popular Tags** — quick links to common product searches.
 
+## SEO
+
+- Google Search Console verification meta tag is in `<head>`.
+- Primary meta tags: description, keywords, canonical (`https://paintplus.pages.dev/`), robots.
+- Open Graph + Twitter Card tags for link previews.
+- JSON-LD structured data (`HomeAndConstructionBusiness`) with services and contact number.
+- `robots.txt` and `sitemap.xml` at the site root.
+
 ## Tech Stack
 
 | Layer | Used |
