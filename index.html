@@ -73,6 +73,16 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+        html {
+            scroll-behavior: smooth;
+        }
+        section[id] {
+            scroll-margin-top: 88px;
+        }
+        .nav-link.is-active {
+            color: #db2777;
+            font-weight: 600;
+        }
         .hero-bg {
             background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
@@ -126,11 +136,11 @@
             
             <!-- Desktop Menu (Reordered as per request) -->
             <div class="hidden md:flex space-x-8 font-medium text-gray-600">
-                <a href="#home" class="hover:text-pink-500 transition">Home</a>
-                <a href="#products" class="hover:text-pink-500 transition">Paints & Textures</a>
-                <a href="#catalog" class="hover:text-pink-500 transition">Catalog</a>
-                <a href="#services" class="hover:text-pink-500 transition">Services</a>
-                <a href="#calculator" class="hover:text-pink-500 transition">Paint Calculator</a>
+                <a href="#home" data-nav="home" class="nav-link hover:text-pink-500 transition">Home</a>
+                <a href="#products" data-nav="products" class="nav-link hover:text-pink-500 transition">Paints &amp; Textures</a>
+                <a href="#catalog" data-nav="catalog" class="nav-link hover:text-pink-500 transition">Catalog</a>
+                <a href="#services" data-nav="services" class="nav-link hover:text-pink-500 transition">Services</a>
+                <a href="#calculator" data-nav="calculator" class="nav-link hover:text-pink-500 transition">Paint Calculator</a>
             </div>
 
             <div class="hidden md:block">
@@ -149,11 +159,11 @@
 
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4">
-            <a href="#home" class="block text-gray-600 font-medium">Home</a>
-            <a href="#products" class="block text-gray-600 font-medium">Paints & Textures</a>
-            <a href="#catalog" class="block text-gray-600 font-medium">Catalog</a>
-            <a href="#services" class="block text-gray-600 font-medium">Services</a>
-            <a href="#calculator" class="block text-gray-600 font-medium">Paint Calculator</a>
+            <a href="#home" data-nav="home" class="nav-link block text-gray-600 font-medium">Home</a>
+            <a href="#products" data-nav="products" class="nav-link block text-gray-600 font-medium">Paints &amp; Textures</a>
+            <a href="#catalog" data-nav="catalog" class="nav-link block text-gray-600 font-medium">Catalog</a>
+            <a href="#services" data-nav="services" class="nav-link block text-gray-600 font-medium">Services</a>
+            <a href="#calculator" data-nav="calculator" class="nav-link block text-gray-600 font-medium">Paint Calculator</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpEZU_60Y_j7KxyobQsz-uVd_m6sQBqfUqpBRZRDHPztQ_pA/viewform" target="_blank" rel="noopener" class="w-full bg-pink-600 text-white px-6 py-2 rounded-lg font-semibold block text-center">Enquire Now</a>
         </div>
     </nav>
@@ -654,6 +664,74 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-pink-500 font-bold uppercase tracking-wider text-sm">What We Do</span>
+                <h2 class="text-4xl font-bold text-gray-800 mt-2">Home Improvement Services</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Painting, waterproofing and finishing services for homes and offices - from surface preparation to the final coat.</p>
+                <div class="w-24 h-1 bg-pink-500 mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-5">
+                        <i class="fas fa-paint-roller text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Interior Painting</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Silk, matt and washable emulsion finishes for living rooms, bedrooms and kitchens, with putty and primer included.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-5">
+                        <i class="fas fa-house text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Exterior Painting</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Weatherproof exterior coatings that resist sun, rain and dust, so the outside of your home stays fresh for years.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-5">
+                        <i class="fas fa-droplet-slash text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Waterproofing</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Treatment for terrace, bathroom and wall leakage - sealed and cured before any paint is applied.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-5">
+                        <i class="fas fa-palette text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Texture &amp; Designer Finishes</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Royale Play, Marmorino, metallic, mineral and concrete effects for feature walls and full rooms.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-5">
+                        <i class="fas fa-brush text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Wood Finishes</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Polish, enamel and stain for doors, windows and furniture, matched to your interior colour scheme.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-5">
+                        <i class="fas fa-clipboard-check text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Free Site Visit &amp; Estimate</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Our executive calls within 2 hours to schedule a free site visit and give you a written painting estimate.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#enquiry" class="inline-block bg-pink-600 text-white px-8 py-4 rounded-full font-bold hover:bg-pink-700 transition shadow-lg transform hover:-translate-y-0.5">
+                    Book a Free Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Paint Calculator Section -->
     <section id="calculator" class="py-20 bg-white">
         <div class="container mx-auto px-6">
@@ -1032,6 +1110,39 @@
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+        // Nav: highlight active link and update the tab title per section
+        const sectionTitles = {
+            home: 'Paint Plus | Interior & Exterior Painting, Waterproofing & Wall Textures',
+            products: 'Paints & Textures | Paint Plus',
+            catalog: 'Catalogue | Paint Plus',
+            services: 'Services | Paint Plus',
+            calculator: 'Paint Cost Calculator | Paint Plus',
+            enquiry: 'Book a Consultation | Paint Plus'
+        };
+        const navLinks = document.querySelectorAll('.nav-link');
+        function setActiveSection(id) {
+            navLinks.forEach(link => {
+                const on = link.dataset.nav === id;
+                link.classList.toggle('is-active', on);
+                if (on) { link.setAttribute('aria-current', 'true'); } else { link.removeAttribute('aria-current'); }
+            });
+            if (sectionTitles[id]) document.title = sectionTitles[id];
+        }
+        navLinks.forEach(link => link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            setActiveSection(link.dataset.nav);
+            if (history.replaceState) history.replaceState(null, '', '#' + link.dataset.nav);
+        }));
+        const observedSections = ['home', 'products', 'catalog', 'services', 'calculator', 'enquiry']
+            .map(id => document.getElementById(id)).filter(Boolean);
+        if ('IntersectionObserver' in window) {
+            const navObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => { if (entry.isIntersecting) setActiveSection(entry.target.id); });
+            }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+            observedSections.forEach(section => navObserver.observe(section));
+        }
+        setActiveSection((location.hash || '#home').slice(1));
 
         // WhatsApp Form Handler
         function sendToWhatsApp() {
